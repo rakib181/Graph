@@ -47,7 +47,7 @@ public class SegmentTree {
                 return;
             }
             if(lazy[node]!=INF){
-                st[node]=lazy[node];
+                st[node]=Math.min(st[node],lazy[node]);
                 if(start!=end){
                     lazy[2*node+1]=lazy[node];
                     lazy[2*node+2]=lazy[node];
